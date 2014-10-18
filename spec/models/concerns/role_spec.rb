@@ -10,7 +10,7 @@ describe Role do
     
     context 'role method return admin' do
     
-      before { user.stub!(:role).and_return('admin') }
+      before { user.stub(:role).and_return('admin') }
     
       specify { user.role_admin? }
     
@@ -18,7 +18,7 @@ describe Role do
     
     context 'role method return nil' do
     
-      before { user.stub!(:role).and_return(nil) }
+      before { user.stub(:role).and_return(nil) }
     
       specify do
         expect(user.role_admin?).to eq(false)
@@ -28,7 +28,7 @@ describe Role do
     
     context 'role method return user' do
     
-      before { user.stub!(:role).and_return('user') }
+      before { user.stub(:role).and_return('user') }
     
       specify do
         expect(user.role_admin?).to eq(false)

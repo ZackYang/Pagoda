@@ -7,6 +7,7 @@ require 'capybara/rspec'
 require 'webmock/rspec'
 require 'capybara/poltergeist'
 require 'ffaker'
+require 'with_model'
 
 Capybara.javascript_driver = :poltergeist
 

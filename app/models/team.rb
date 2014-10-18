@@ -3,6 +3,8 @@ class Team < ActiveRecord::Base
   has_many :team_memberships
   has_many :users, through: :team_memberships
   
+  has_many :projects
+  
   validates :name, presence: true
   
   after_commit :set_the_first_user_as_super_admin, on: :create

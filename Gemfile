@@ -32,6 +32,8 @@ gem 'omniauth-identity', '~> 1.1.1'
 
 gem 'cancancan', '~> 1.9'
 
+gem 'state_machine', '~> 1.2.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -59,5 +61,6 @@ group :test do
   gem 'spork-rails'
   gem 'ffaker', '~> 1.16'
   gem 'test_after_commit'
+  gem 'with_model'
 end
 
