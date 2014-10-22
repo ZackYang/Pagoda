@@ -12,5 +12,45 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require twitter/bootstrap
+
+//= require underscore
+//= require ./utilities/namespace
+
+//= require backbone
+//= require backbone.marionette
+//= require handlebars.runtime
+//= require handlebars
+//= require backbone-associations
+
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./templates
+//= require_tree ./views
+//= require_tree ./controllers
+
+//= require main
+//= require_self
+
+namespace('Pagoda')
+
+Pagoda.Application = Marionette.Application.extend({
+  initialize: function(options) {
+    console.log(options.container);
+  }
+});
+
+/*
+Pagoda.on("start", function(options){
+  if (Backbone.history){
+    Backbone.history.start();
+  }
+});*/
+
+
+// Pagoda.addInitializer(function(options){
+//   Backbone.history.start();
+// });
+
+// var pagoda = new Pagoda({container: '#app'});
+

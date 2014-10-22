@@ -1,0 +1,2 @@
+namespace('Pagoda.views.teams')
+

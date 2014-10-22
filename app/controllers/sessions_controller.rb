@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   
   def create
     provider = Provider.find_or_create_by_hash(request.env['omniauth.auth'])
-    current_user = provider.user
+    self.current_user = provider.user
     redirect_to '/'
   end
   

@@ -1,0 +1,20 @@
+<div class="row">
+  <ul class="offset3 span4 team-list">
+    <% current_user.teams.each do |team| %>
+    <li>
+      <%= link_to team.name, team %>
+    </li>
+    <% end %>
+    <li>
+      <a id="create-team" href="javascript:void(0)">
+        <i class="icon-plus"></i>
+        新的团队
+      </a>
+      
+      <%= form_for @team do |f| %>
+        <%= f.text_field :name, placeholder: '给团队起个名字吧' %>
+        <button type="submit" class="btn">Submit</button>
+      <% end %>
+    </li>
+  </ul>
+</div>

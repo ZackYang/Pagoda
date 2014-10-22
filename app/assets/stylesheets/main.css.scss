@@ -1,0 +1,79 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  font-family: arial, sans-serif;
+}
+
+a.header-avatar {
+  img {
+    width: 24px;
+    border-radius: 50%;
+  }
+}
+
+.navbar {
+  
+  font-size: 16px;
+  margin-top: 30px;
+  .navbar-right {
+    float: right !important;
+  }
+  
+  .nav {
+    .active {
+      a {
+        border-radius: 10%;
+      }
+    }
+  }
+}
+
+
+.workspace {
+  background-color: white;
+}
+
+ul.team-list {
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width: 320px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0px 1px 6px rgba(0,0,0,0.15);
+  margin-top: 40px;
+  li {
+    font-size: 24px;
+    border-bottom: 1px solid #ccc;
+    color: #666;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    vertical-align: baseline;
+    display: list-item;
+    height: 80px;
+    
+    &:last-child {
+      border: none;
+    }
+    
+    a {
+      display: block;
+      color: #666;
+      line-height: 80px;
+      text-decoration: none;
+    }
+    
+    form {
+      .btn {
+        margin-top: -10px;
+      }
+    }
+  }
+}
