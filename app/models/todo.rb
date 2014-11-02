@@ -3,6 +3,8 @@ class Todo < ActiveRecord::Base
   belongs_to :project
   belongs_to :owner, class_name: 'User'
   
+  validates :name, :project_id, presence: true
+  
   include EventTrigger
   
   state_machine :state, initial: :pause do

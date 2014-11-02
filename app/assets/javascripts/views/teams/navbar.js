@@ -1,6 +1,6 @@
 namespace('Pagoda.views.teams')
 
-Pagoda.views.teams.Navbar = Marionette.Layout.extend({
+Pagoda.views.teams.Navbar = Marionette.LayoutView.extend({
 
   template: HandlebarsTemplates["teams/nav"],
   

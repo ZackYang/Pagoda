@@ -1,0 +1,14 @@
+<ul class='projects-list'>
+  {{#each projects}}
+  <li class="project-item" project-id="{{id}}">
+  <%= image_tag "project-default.png", class: 'project-icon' %>
+  <h4 class='name'>{{name}}</h4>
+  <h5 class='description'>{{description}}</h5>
+  </li>
+  {{/each}}
+  <li class="project-item" behaviour="new">
+  <%= image_tag "project-create.png", class: 'project-icon' %>
+  <h4 class='name'>创建新项目</h4>
+  </li>
+</ul>
+<div class="clear-both" />

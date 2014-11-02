@@ -5,8 +5,14 @@ class Api::V1::ProjectsController < Api::V1::BaseController
   respond_to :json
   
   def create
-    @team.projects.create(project_params)
-    respond_with(@team)
+    @project = @team.projects.create(project_params)
+    @project.users << current_user
+    respond_with(:api, :v1, @team, @project)
+  end
+  
+  def show
+    @project = @team.projects.find(params[:id])
+    respond_with(@project)
   end
   
   private

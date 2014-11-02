@@ -7,6 +7,10 @@ body {
   font-family: arial, sans-serif;
 }
 
+li {
+  list-style: none;
+}
+
 a.header-avatar {
   img {
     width: 24px;
@@ -76,4 +80,142 @@ ul.team-list {
       }
     }
   }
+}
+
+div#crumbs {
+  
+  padding: 0 10px;
+  
+  ul {
+    
+    li {
+      border: 1px solid #dddddd;
+      display: block;
+      padding: 0 30px;
+      line-height: 46px;
+      font-size: 18px;
+      color: #888888;
+      background: #f9f9f9;
+      cursor: pointer;
+      
+      &:hover {
+        background: white;
+      }
+    }
+  }
+}
+
+div#team-panel {
+  background-color: white;
+  min-height: 400px;
+  box-shadow: 0 0 5px #aaa;
+  
+  ul.projects-list {
+    
+    li.project-item {
+      border: 1px solid white;
+      border-radius: 6px;
+      display: block;
+      float: left;
+      height: 180px;
+      position: relative;
+      width: 200px;
+      margin: 10px 10px;
+      cursor: pointer;
+      
+      &:hover {
+        border: 1px solid #eaeaea;
+        background-color: #f9f9f9;
+      }
+      
+      h4.name {
+        text-align: center;
+      }
+      
+      h5.description {
+        color: #999999;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 20px;
+      }
+      
+      img.project-icon {
+        width: 100px;
+        margin: 10px 50px;
+      }
+      
+      
+    }
+    
+  }
+  
+  div.projects-new {
+    padding: 10px;
+    
+    #project-desc {
+      font-size: 13px;
+      width: 400px;
+      height: 100px;
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+  }
+  
+  div.project-detail {
+    padding: 20px;
+    div.project-header {
+      height: 80px;
+      border-bottom: 3px #eee;
+      border-bottom-style: dashed;
+      
+      h1.project-name {
+        display: inline-block;
+        max-width: 580px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid transparent;
+        font-size: 28px;
+        line-height: 28px;
+        color: #555;
+        text-align: left;
+        word-wrap: break-word;
+      }
+    }
+    
+    #todo-panel {
+      #new-todo {
+        .new-todo-button {
+          
+        }
+      }
+      
+      #new-todo-form {
+        display: none;
+        #new-todo-form-name {
+          border: none;
+          border-bottom: 1px #B3B3B3;
+          border-radius: 0;
+          border-bottom-style: dashed;
+          box-shadow: none;
+          width: 100%;
+        }
+        
+        .popover-content {
+          width: 220px;
+          height: 60px;
+          padding: 0;
+        }
+        
+        .new-todo-form-user {
+          font-size: small;
+        }
+      }
+    }
+  
+  }
+  
+}
+
+.clear-both {
+    clear: both;
 }

@@ -38,7 +38,7 @@ gem 'kaminari'
 
 # backbone
 gem 'backbone-rails', '~> 1.1.2'
-gem 'marionette-rails'
+gem 'marionette-rails', '~> 2.2.1'
 gem 'handlebars_assets'
 gem 'backbone-associations-rails'
 # gem 'backbone-relational-rails'

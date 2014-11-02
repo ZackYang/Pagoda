@@ -13,14 +13,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN
 
 //= require underscore
 //= require ./utilities/namespace
+//= require ./utilities/utilities
 
 //= require backbone
 //= require backbone.marionette
 //= require handlebars.runtime
 //= require handlebars
+//= require ./utilities/handlebars_helpers
 //= require backbone-associations
 
 //= require_tree ./models

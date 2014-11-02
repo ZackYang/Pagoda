@@ -4,6 +4,9 @@
 namespace('Pagoda.models')
 
 Pagoda.models.Team = Backbone.AssociatedModel.extend({
+  
+  urlRoot: '/api/v1/teams',
+  
   relations: [
   {
     type: Backbone.Many,//nature of the relation

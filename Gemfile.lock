@@ -98,8 +98,8 @@ GEM
     libv8 (3.16.14.3)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
-    marionette-rails (1.1.0)
-      rails (>= 3.1.0)
+    marionette-rails (2.2.1)
+      railties (>= 3.1)
     method_source (0.8.2)
     mime-types (2.4.1)
     mini_portile (0.6.0)
@@ -236,7 +236,7 @@ DEPENDENCIES
   kaminari
   launchy
   less-rails
-  marionette-rails
+  marionette-rails (~> 2.2.1)
   mysql2
   omniauth (~> 1.2.2)
   omniauth-identity (~> 1.1.1)

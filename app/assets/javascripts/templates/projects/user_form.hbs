@@ -1,0 +1,13 @@
+<ul>
+  <li>
+    <select class='user-id'>
+      <option value="">不指派</option>
+      {{#each users}}
+      <option value="{{id}}" {{selected}}>{{nickname}}</option>
+      {{/each}}
+    </selected>
+  </li>
+  <li>
+    <input type='text' class='datepicker' placeholder='预计时间' value='{{estimate}}' />
+  </li>
+</ul>
