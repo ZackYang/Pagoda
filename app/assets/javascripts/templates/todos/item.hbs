@@ -1,1 +1,62 @@
-{{name}}
+<form>
+  <div class='row'>
+    {{#if id}}
+    <div class="control-bar btn-toolbar">
+      <div class="btn-group">
+        <button class="btn remove"><i class="icon-trash"></i></button>
+        <button class="btn edit"><i class="icon-pencil"></i></button>        
+        {{#if isHandling}}
+        <button class="btn pause">
+          <i class="icon-pause"></i>
+        </button>
+        {{else}}
+        <button class="btn play">
+          <i class="icon-play"></i>
+        </button>
+        {{/if}}
+      </div>
+    </div>
+    {{/if}}
+  
+    {{#if isHandling}}
+    <img class='avatar' alt="Default avatar" src="{{userAvatar}}">
+    {{/if}}
+    {{#if id}}
+      {{#if editUserName}}
+      <input class='todo-name' autocomplete='off' type='text' name='name' placeholder='任务名称' value='{{name}}' />
+      {{else}}
+      <span class='todo-name'>{{name}}</span>
+      {{/if}}
+    {{else}}
+    <input class='todo-name' autocomplete='off' type='text' name='name' placeholder='任务名称' value='{{name}}' />
+    {{/if}}
+  
+    <span class='user-state {{#if editUserState}}hide{{/if}}'>{{userState}}</span>
+  
+  
+    <span class='set-user-state {{#unless editUserState}}hide{{/unless}}'>
+      <select class='user-id' name='user_id'>
+        <option value=''>指派成员</option>
+        {{#each availableUsers}}
+        <option value="{{id}}" {{selected}}>{{nickname}}</option>
+        {{/each}}
+      </select>
+      <input type='text' class='estimate' name='estimate' placeholder='完成日期'/>
+    </span>
+  
+    <br/>
+    {{#unless id}}
+    <button class='btn save-button'>
+      创建任务
+    </button>
+    <a>取消</a>
+    {{/unless}}
+    
+    {{#if editUserName}}
+    <button class='btn save-button'>
+      保存修改
+    </button>
+    {{/if}}
+  
+  </div>
+</form>

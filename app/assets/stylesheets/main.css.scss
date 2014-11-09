@@ -109,6 +109,7 @@ div#team-panel {
   background-color: white;
   min-height: 400px;
   box-shadow: 0 0 5px #aaa;
+  padding-bottom: 40px;
   
   ul.projects-list {
     
@@ -183,33 +184,83 @@ div#team-panel {
     }
     
     #todo-panel {
-      #new-todo {
-        .new-todo-button {
+      
+      ul.todo-list {
+        margin-left: 30px;
+        li {
+          margin: 15px 0;
+          position: relative;
+          min-height: 30px;
           
+          span.todo-name {
+            display: inline-block;
+            line-height: 30px;
+          }
+          
+          input.todo-name {
+            border: none;
+            box-shadow: none;
+            border-bottom: 1px #9e9e9e;
+            border-bottom-style: dashed;
+            border-radius: 0;
+            width: 400px;
+          }
+          
+          form {
+            display: inline-block;
+            
+            select.user-id {
+              width: auto;
+            }
+          
+            input.estimate {
+              margin-bottom: 0;
+              width: 100px;
+            }
+          }
+          
+          .avatar {
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+            margin-bottom: -8px;
+          }
+          
+          &:hover {
+            div.control-bar {
+              display: block;
+            }
+          }
+          
+          div.control-bar {
+            position: absolute;
+            left: -150px;
+            z-index: 100;
+            line-height: 30px;
+            display: block;
+            width: 50px;
+            top: -10px;
+            padding: 0 10px;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            border-right: none;
+            display: none;
+          }
+          
+          span.user-state {
+            background-color: #eee;
+            top: -5px;
+            font-size: 12px;
+            padding: 3px 15px;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-bottom: 3px;
+            color: #9e9e9e;
+            position: relative;
+          }
         }
       }
       
-      #new-todo-form {
-        display: none;
-        #new-todo-form-name {
-          border: none;
-          border-bottom: 1px #B3B3B3;
-          border-radius: 0;
-          border-bottom-style: dashed;
-          box-shadow: none;
-          width: 100%;
-        }
-        
-        .popover-content {
-          width: 220px;
-          height: 60px;
-          padding: 0;
-        }
-        
-        .new-todo-form-user {
-          font-size: small;
-        }
-      }
     }
   
   }
@@ -217,5 +268,5 @@ div#team-panel {
 }
 
 .clear-both {
-    clear: both;
+  clear: both;
 }

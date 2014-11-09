@@ -3,5 +3,6 @@
 </div>
 
 <%= javascript_tag do %>
-  var teamController = new Pagoda.controllers.Team({ id: <%= params[:id] %> });
+  currentUser = new Pagoda.models.User(<%= raw current_user.to_json(methods: :avatar, except: [:updated_at, :created_at]) %>);
+  teamController = new Pagoda.controllers.Team({ id: <%= params[:id] %> });
 <% end %>

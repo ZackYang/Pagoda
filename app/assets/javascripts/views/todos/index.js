@@ -8,8 +8,6 @@ Pagoda.views.todos.Index = Marionette.CollectionView.extend({
   
   tagName: 'ul',
   
-  initialize: function() {
-    this.collection.on('change reset add remove', this.render, this);
-  }
+  className: 'todo-list'
 
 });

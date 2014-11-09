@@ -1,7 +1,7 @@
 class Todo < ActiveRecord::Base
   
   belongs_to :project
-  belongs_to :owner, class_name: 'User'
+  belongs_to :owner, class_name: 'User', foreign_key: :user_id
   
   validates :name, :project_id, presence: true
   
@@ -31,6 +31,10 @@ class Todo < ActiveRecord::Base
       todo.completed_at = ::Time.zone.now
     end
     
+  end
+  
+  def fire= event
+    self.fire(event)
   end
   
 end

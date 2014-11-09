@@ -4,10 +4,20 @@ class Api::V1::TodosController < Api::V1::BaseController
   
   def create
     @todo = Todo.create(todo_params)
-    respond_with(:api, :v1, @todo)
+    respond_with(:api, :v1, @todo, template: 'api/v1/todos/show')
   end
   
-  def show
+  def update
+    @todo = Todo.find(params[:id])
+    @todo.update_attributes! todo_params
+    @todo.fire_events!(params[:fire]) if params[:fire]
+    respond_with(:api, :v1, @todo, template: 'api/v1/todos/show')
+  end
+  
+  def destroy
+    @todo = Todo.find(params[:id])
+    @todo.destroy!
+    respond_with(:api, :v1, @todo, template: 'api/v1/todos/show')
   end
   
   private

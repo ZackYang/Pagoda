@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141016222105) do
+ActiveRecord::Schema.define(version: 20141102162107) do
 
   create_table "events", force: true do |t|
     t.string   "committable_type"
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 20141016222105) do
     t.string   "nickname"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
 end

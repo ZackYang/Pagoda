@@ -36,6 +36,8 @@ gem 'state_machine', '~> 1.2.0'
 
 gem 'kaminari'
 
+gem 'gravtastic'
+
 # backbone
 gem 'backbone-rails', '~> 1.1.2'
 gem 'marionette-rails', '~> 2.2.1'
@@ -47,6 +49,7 @@ gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-select-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
