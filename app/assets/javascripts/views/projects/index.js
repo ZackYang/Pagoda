@@ -30,12 +30,12 @@ Pagoda.views.projects.Index = Marionette.LayoutView.extend({
   },
   
   showProject: function(projectId) {
-    self = this;
+    currentView = this;
     model = this.model.get('projects').get(projectId);
     model.fetch({
       reset: true,
       success: function(model, response, options) {
-        window.mainView.pushView(self, new Pagoda.views.projects.Show({ model: model }), 'teamPanel');
+        window.mainView.pushView(currentView, new Pagoda.views.projects.Show({ model: model }), 'teamPanel');
       }
     })
   }

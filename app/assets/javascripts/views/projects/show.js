@@ -14,6 +14,9 @@ Pagoda.views.projects.Show = Backbone.Marionette.LayoutView.extend({
   initialize: function() {
     this.viewName = this.model.get('name');
     this.model.on('change:todos[*].id', this.showNewTodoBtb, this);
+    this.viewName = function() {
+      return this.model.get('name');
+    }
   },
   
   regions: function(options){
@@ -23,7 +26,7 @@ Pagoda.views.projects.Show = Backbone.Marionette.LayoutView.extend({
   },
   
   onRender: function() {
-    this.todosRegion.show(new Pagoda.views.todos.Index({ collection: this.model.get('todos') }));
+    this.todosRegion.show(new Pagoda.views.todos.Index({ collection: this.model.get('todos'), parentView: this }));
   },
   
   addNewTodo: function(e) {

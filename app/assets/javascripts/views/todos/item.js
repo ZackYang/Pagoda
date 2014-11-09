@@ -10,7 +10,7 @@ Pagoda.views.todos.Item = Marionette.ItemView.extend({
     return (this.model.get('state') == 'completed') ? 'hide' : '';
   },
   
-  initialize: function() {
+  initialize: function(options) {
     this.model.on('change', this.render, this);
     this.editUserState = false;
     this.editUserName = false;
@@ -26,7 +26,8 @@ Pagoda.views.todos.Item = Marionette.ItemView.extend({
     'change .user-id'      : 'setUserState',
     'change .estimate'     : 'setUserState',
     'change .todo-name'    : 'setName',
-    'mouseup .save-button' : 'saveItem'
+    'mouseup .save-button' : 'saveItem',
+    'click .todo-name'     : 'openTodo'
   },
   
   onRender: function() {
@@ -142,6 +143,17 @@ Pagoda.views.todos.Item = Marionette.ItemView.extend({
     this.editUserName = false;
     this.model.save();
     return null;
+  },
+  
+  openTodo: function(e) {
+    e.preventDefault();
+    currentView = this;
+    this.model.fetch({
+      success: function() {
+        itemShowView = new Pagoda.views.todos.Show({ model: currentView.model });
+        window.mainView.pushView(currentView.parentView, itemShowView, 'teamPanel');
+      }
+    })
   }
   
 })

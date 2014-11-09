@@ -25,7 +25,7 @@
       {{#if editUserName}}
       <input class='todo-name' autocomplete='off' type='text' name='name' placeholder='任务名称' value='{{name}}' />
       {{else}}
-      <span class='todo-name'>{{name}}</span>
+      <span class='todo-name'><a href='javascript:void(0)'>{{name}}</a></span>
       {{/if}}
     {{else}}
     <input class='todo-name' autocomplete='off' type='text' name='name' placeholder='任务名称' value='{{name}}' />
